@@ -7,4 +7,6 @@ const tabs = this._l(panes, (pane, index) => {
 		const closable = pane.isClosable !== false && editable;
         pane.index = `${index}`;
 
-        const btnClose = closable
+
+html记得配置closable属性
+<el-tab-pane :key="item.name" v-for="(item, index) in editableTabs" :label="item.title":name="item.name" :closable="item.closable"></el-tab-pane>
